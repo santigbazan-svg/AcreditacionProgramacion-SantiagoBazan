@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | BALANCE</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/contacto.js" defer></script>
+</head>
+
+<body>
+
+    //encabezado
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="brand">
+                BALANCE<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="main-nav">
+                ☰
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="contacto.html" class="nav-contact">Contacto</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    //contenido principal
+    <main class="contact-page">
+
+        <div class="container contact-layout">
+
+            <section class="contact-intro">
+
+                <span class="eyebrow">
+                    ESTAMOS PARA AYUDARTE
+                </span>
+
+                <h1>Hablemos de tecnología.</h1>
+
+                <p>
+                    En BALANCE queremos conocer tus necesidades.
+                    Completá el siguiente formulario y nuestro equipo
+                    recibirá tu consulta.
+                </p>
+
+                <div class="contact-info-card">
+
+                    <h3>¿Por qué contactarnos?</h3>
+
+                    <p>
+                        Podemos asesorarte sobre instalación de redes,
+                        mantenimiento informático y cableado estructurado.
+                    </p>
+
+                </div>
+
+                <a href="index.html" class="text-link">
+                    ← Volver al inicio
+                </a>
+
+            </section>
+
+
+            //formulario
+            <section class="contact-form-card">
+
+                <h2>Enviá tu consulta</h2>
+
+                <p class="form-description">
+                    Los campos marcados son obligatorios.
+                </p>
+
+                <form id="contact-form">
+
+                    <div class="form-group">
+
+                        <label for="nombre">Nombre completo *</label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingresá tu nombre"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Correo electrónico *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="ejemplo@gmail.com"
+                            maxlength="150"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="asunto">Asunto *</label>
+
+                        <input
+                            type="text"
+                            id="asunto"
+                            name="asunto"
+                            placeholder="¿Sobre qué trata tu consulta?"
+                            maxlength="150"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mensaje">Mensaje *</label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            minlength="10"
+                            maxlength="2000"
+                            placeholder="Escribí tu consulta aquí..."
+                            required
+                        ></textarea>
+
+                        <small>
+                            El mensaje debe contener al menos 10 caracteres.
+                        </small>
+
+                    </div>
+
+
+                    <button type="submit" class="btn form-button" id="submit-button">
+                        Enviar consulta
+                    </button>
+
+                    <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    //pie de página
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <a href="index.html" class="footer-brand">
+                BALANCE<span>.</span>
+            </a>
+
+            <p>Déjanos encontrar tu balance.</p>
+
+            <p class="copyright">
+                © 2026 BALANCE. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

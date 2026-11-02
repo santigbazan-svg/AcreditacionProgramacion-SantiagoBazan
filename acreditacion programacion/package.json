@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express-session": "^1.19.0"
+  }
+}

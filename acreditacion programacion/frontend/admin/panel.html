@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel administrativo | BALANCE</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="../js/admin.js" defer></script>
+</head>
+
+<body class="admin-panel-body">
+
+    //encabezado y navegación
+    <header class="admin-header">
+
+        <div class="container admin-header-content">
+
+            <a href="../index.html" class="brand">
+                BALANCE<span>.</span>
+            </a>
+
+            <div class="admin-header-actions">
+
+                <span class="admin-user">
+                    <span class="user-icon">👤</span>
+                    Administrador
+                </span>
+
+                <button type="button" id="logout-button" class="btn logout-button">
+                    Cerrar sesión
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="container admin-container">
+
+        //presentacion
+        <section class="admin-welcome">
+
+            <span class="eyebrow">ÁREA PRIVADA</span>
+
+            <h1>Panel de administración</h1>
+
+            <p>
+                Administrá y consultá los mensajes recibidos
+                a través del sitio web de BALANCE.
+            </p>
+
+        </section>
+
+
+        //resumen de consultas
+        <section class="admin-stats">
+
+            <article class="admin-stat-card">
+
+                <div class="stat-icon">📨</div>
+
+                <div>
+                    <p>Consultas recibidas</p>
+                    <h2 id="total-count">0</h2>
+                </div>
+
+            </article>
+
+
+            <article class="admin-stat-card">
+
+                <div class="stat-icon">📩</div>
+
+                <div>
+                    <p>Consultas no leídas</p>
+                    <h2 id="unread-count">0</h2>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        // filtros
+        <section class="admin-filters">
+
+            <h2>Administrar consultas</h2>
+
+            <div class="filters-grid">
+
+                <div class="filter-group">
+
+                    <label for="search-input">
+                        Buscar
+                    </label>
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Nombre o correo..."
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="status-filter">
+                        Estado
+                    </label>
+
+                    <select id="status-filter">
+
+                        <option value="todas">Todas</option>
+
+                        <option value="no-leidas">No leídas</option>
+
+                        <option value="leidas">Leídas</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="date-from">
+                        Desde
+                    </label>
+
+                    <input type="date" id="date-from">
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="date-to">
+                        Hasta
+                    </label>
+
+                    <input type="date" id="date-to">
+
+                </div>
+
+            </div>
+
+            <button type="button" id="clear-filters" class="btn btn-secondary">
+                Limpiar filtros
+            </button>
+
+        </section>
+
+
+        //listado y detalle
+        <section class="admin-main-grid">
+
+            //listado de consultas
+            <div class="consultations-container">
+
+                <div class="consultations-heading">
+
+                    <h2>Bandeja de entrada</h2>
+
+                    <span id="results-count">
+                        0 consultas
+                    </span>
+
+                </div>
+
+                <div id="consultations-list">
+
+                    <p class="loading-message">
+                        Cargando consultas...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            //detalle de consulta
+            <aside class="detail-panel">
+
+                <h2>Detalle de consulta</h2>
+
+                <div id="detail-content">
+
+                    <p class="detail-placeholder">
+                        Seleccioná una consulta para visualizar
+                        su contenido completo.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+        <p id="admin-message" class="form-message" role="status" aria-live="polite"></p>
+
+    </main>
+
+
+    //pie de página
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <a href="../index.html" class="footer-brand">
+                BALANCE<span>.</span>
+            </a>
+
+            <p>Panel de administración</p>
+
+            <p class="copyright">
+                © 2026 BALANCE. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
